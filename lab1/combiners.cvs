@@ -1,0 +1,15 @@
+25,5,1000
+100,3,623
+4,3,200
+15,8,50
+
+def from_file(path: str):
+    f = open(path, "r")
+    combiners = []
+    for line in f:
+        string = line
+        str_list = string.split(",")
+        combiner = Combiner(str_list[0], str_list[1], (str_list[2])[:-2])
+        combiners.append(combiner)
+
+    return combiners
